@@ -53,9 +53,9 @@ echo 'producto actualizado';
 $lista = ProductosDAO::actualizar($producto);*/
 
 
-$usuario = UsuarioDAO::validar('luisabrigo@hotmail.com','tecsup');
+/*$usuario = UsuarioDAO::validar('luisabrigo@hotmail.com','tecsup');
 
-var_dump($usuario);
+var_dump($usuario);*/
 
 
 

@@ -1,5 +1,6 @@
 <?php
 require_once ("autoload.php");
+require_once ("includes/security.php");
 
 ?>
 
@@ -115,7 +116,7 @@ and open the template in the editor.
       
       <!--items lado derecho-->
       <ul class="nav navbar-nav navbar-right">       
-        <li><a class="items" href="loguear.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>               
+        <li><a class="items" href="logout.php"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>               
       </ul>
        <!--items lado derecho-->
        
@@ -127,7 +128,15 @@ and open the template in the editor.
 </nav>
  <!--menu de navegacion-->
  
- <?=Flash::show()?>
+ <div id="bienvenida" class="container">
+ 	<div class="jumbotron">
+  		<h2>Bienvenido</h2>  		
+	</div>
+ </div>
+ 
+ 
+ 
+ <!--<?=Flash::show()?>-->
  
  
 <!--presentacion del contenido-->
@@ -157,7 +166,7 @@ and open the template in the editor.
     
      <!--jquery para el dezplazamiento vertical del submenu-->
 	<script>
-    $(document).ready(function() {
+   	$(document).ready(function() {
    // Muestra y oculta los menús
    		$('ul li:has(ul)').hover(
      		 function(e)
@@ -169,21 +178,12 @@ and open the template in the editor.
          		$(this).find('ul').css({display: "none"});
       			}
    		);
-	});	     
-    <!--jquery para el dezplazamiento vertical del submenu-->  
-   	
+	});	   
+    <!--jquery para el dezplazamiento vertical del submenu-->  	
 	
-    <!--jquery eventos imagenes del index-->  	 
- 	$(document).ready(function(){
- 		$("#contenido").hover(function(){
-        	$("#imagen1").fadeIn(1000); 
-			$("#imagen2").fadeIn(2500);
-			$("#imagen3").fadeIn(4000);
-			$("#footer").show(2000);          
-    	});
-	});
+	
 	</script>    
-    <!--jquery eventos imagenes del index--> 
+    
     
       
     </body>
