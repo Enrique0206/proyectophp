@@ -5,9 +5,10 @@ require_once ("ProductosDAO.php");
 require_once ("../dto/Producto.php");
 require_once ("CategoriasDAO.php");
 require_once ("../dto/Categoria.php");
-include ("UsuarioDAO.php");
-include ("../dto/Usuario.php");
-
+require_once ("UsuarioDAO.php");
+require_once ("../dto/Usuario.php");
+require_once ("RolesDAO.php");
+require_once ("../dto/Rol.php");
 
 
 /*$lista = ProductosDAO::listar();
@@ -56,6 +57,21 @@ $lista = ProductosDAO::actualizar($producto);*/
 /*$usuario = UsuarioDAO::validar('luisabrigo@hotmail.com','tecsup');
 
 var_dump($usuario);*/
+
+
+
+
+$usuario= new Usuario();
+
+$usuario->username = 'matimati';
+$usuario->password = 'tecsup';
+$usuario->nombres = 'polliqui';
+$usuario->rol_id = 2;
+$usuario->email = 'matias1@hotmail.com';
+
+UsuarioDAO::registrar($usuario);
+
+echo 'producto registrado';
 
 
 

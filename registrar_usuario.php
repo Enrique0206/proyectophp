@@ -2,7 +2,7 @@
 require_once ("autoload.php");
 require_once ("includes/security.php");
 
-$lista = CategoriasDAO::listar();
+$lista = RolesDAO::listar();
 
 ?>
 
@@ -133,57 +133,50 @@ and open the template in the editor.
         <!--contenedor-->
         <div class="container">
             
-            <form action="producto_registrado.php" method="POST" enctype="multipart/form-data">
+            <form action="usuario_registrado.php" method="POST" enctype="multipart/form-data">
             
                 <div class="panel panel-default">
 
                     <div class="panel-heading">
-                        <h3 class="panel-title">Registro de Productos</h3>
+                        <h3 class="panel-title">Registro de Usuarios</h3>
                     </div>
 
                     <div class="panel-body">
 
                         <div class="form-group">
-                            <label for="categoria_id">Categoría</label>
-                            <select name="categoria_id" id="categoria_id" class="form-control" required>
-                            	<option value="" selected="" disabled="">Seleccione una categoría</option>
+                            <label for="rol_id">Usuario</label>
+                            <select name="rol_id" id="rol_id" class="form-control" required>
+                            	<option value="" selected="" disabled="">Seleccione un rol</option>
                                 
-                            	<?php foreach ($lista as $categoria) {?>
-                                <option value="<?=$categoria->id?>"><?=$categoria->nombre?></option>
+                            	<?php foreach ($lista as $rol) {?>
+                                <option value="<?=$rol->id?>"><?=$rol->nombre?></option>
                                 <?php }?>
                                 
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" class="form-control" required="" maxlength="100" placeholder="Ingrese el nombre">
+                            <label for="nombres">Nombres</label>
+                            <input type="text" id="nombres" name="nombres" class="form-control" required="" maxlength="100" placeholder="Ingrese el nombre">
                         </div>
                         
                         <div class="form-group">
-                            <label for="precio">Precio</label>
-                            <div class="input-group">
-                                <div class="input-group-addon">S/.</div>
-                                <input type="number" id="precio" name="precio" class="form-control" placeholder="Ingrese el precio">
-                            </div>
+                            <label for="username">Username</label>                               
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Ingrese el username">
+                            
                         </div>
                         
                         <div class="form-group">
-                            <label for="stock">Stock</label>
-                            <input type="number" id="stock" name="stock" class="form-control" min="0" max="1000" placeholder="Ingrese el nombre">
+                            <label for="email">Correo</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Ingrese el correo">
                         </div>
                         
                         <div class="form-group"><!--se agrega la palabra ckeditor a la classs form control para convertirlo en un editor de texto-->
-                            <label for="descripcion">Descripción</label>
-                            <textarea id="descripcion" name="descripcion" class="form-control ckeditor"></textarea>
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Ingrese el password">                            
                         </div>
+                                                                
                         
-                        <div class="form-group">
-                            <label for="imagen">Imagen</label>
-                            <input type="file" id="imagen" name="imagen" class="form-control">
-                        </div>
-                        
-                        <input type="checkbox" name="estado" data-on-text="Activo" data-off-text="Inactivo" value="1" checked="">
 
                     </div>
 
@@ -210,7 +203,5 @@ and open the template in the editor.
 
     </body>
 </html>
-
-
 
 

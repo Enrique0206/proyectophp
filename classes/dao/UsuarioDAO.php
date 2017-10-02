@@ -22,4 +22,26 @@ class UsuarioDAO{
         return null;
 	}
 	
+	
+	
+	public static function registrar($usuario){
+		
+		$con = Conexion::getConexion();
+		
+		$sql = "insert into usuarios (username, password, nombres, rol_id, email)
+				values (:username, :password, :nombres, :rol_id, :email)";
+				
+		$stmt = $con->prepare($sql)	;
+		
+		$stmt->bindParam(':username', $usuario->username);
+		$stmt->bindParam(':password', $usuario->password);
+		$stmt->bindParam(':nombres', $usuario->nombres);
+		$stmt->bindParam(':rol_id', $usuario->rol_id);
+		$stmt->bindParam(':email', $usuario->email);
+		
+		$stmt->execute();
+				
+		
+		}
+	
 }

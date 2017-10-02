@@ -2,7 +2,7 @@
 
 class ProductosDAO {	
 	
-	Public static function listar (){
+	public static function listar (){
 		
 		$con = Conexion::getConexion();
 		
@@ -25,7 +25,7 @@ class ProductosDAO {
 		}	
 		
 		
-	Public static function registrar($producto){
+	public static function registrar($producto){
 		
 		$con = Conexion::getConexion();
 		
@@ -49,7 +49,7 @@ class ProductosDAO {
 		
 		}	
 		
-	Public static function obtener($id){
+	public static function obtener($id){
 		
 		$con = Conexion::getConexion();
 		
@@ -71,7 +71,7 @@ class ProductosDAO {
 		
 		}
 		
-	Public static function eliminar($id){
+	public static function eliminar($id){
 		
 		$con = Conexion::getConexion();
 		
@@ -83,7 +83,7 @@ class ProductosDAO {
 		
 		}
 		
-	Public static function actualizar($producto) {
+	public static function actualizar($producto) {
 		
 						        
        if(isset($producto->imagen)){
