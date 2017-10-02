@@ -1,0 +1,70 @@
+body{
+	margin:0;
+	background-image:url(../imagenes/jpg/fondo1.jpg);
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+}
+#espacio1 {
+	height: 60px;
+
+}
+.navbar.navbar-default {
+	border-radius: 0px;
+}
+
+.navbar.navbar-default .container-fluid {
+	border-radius: 0px;
+	background-color: #3B3B3B;
+}
+
+
+.nav.navbar-nav li a {
+	color: #FFFFFF;	
+}
+
+.nav.navbar-nav li a.items:hover {
+	background:#000000;
+	color: #FFFFFF;
+}
+
+.nav.navbar-nav .dropdown #desplegable {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+.nav.navbar-nav .dropdown #desplegable a.menudespl:hover {
+	background:#FFFFFF;
+	color: #000000;
+}
+
+
+
+#contenido {
+	border-width: 0px;
+	padding-top: 49px;
+	padding-bottom: 49px;
+	min-height: 1250px;
+}
+
+#contenido .row {
+	padding: 0px;
+	margin-top: 4px;
+
+}
+
+#contenido .row #imagen1 {
+	text-align: center;
+
+
+}
+#contenido .row #imagen2 {
+	text-align: center;
+}
+#contenido .row #imagen3 {
+	text-align: center;
+}
+
+#footer {
+	height: 150px;
+	background-color: rgba(0,0,0,0.5);
+}

@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+body{
+	margin:0;
+	background-image:url(../imagenes/jpg/fondo1.jpg);
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+}
+
+#espacio1 {
+	height: 50px;
+	border-width: 0px;
+}
+#contenido {
+	height: 700px;
+}
+
+
+.navbar.navbar-inverse {
+	border-radius: 0px;
+	color: #3B3B3B;
+	border-width: 0;
+}
+
+.navbar.navbar-inverse .container .navbar-header {
+	border-width: 0px;
+}
+
+.container-fluid .navbar-header .navbar-toggle {
+	border-width: 0px;
+}
+
+
+.nav.navbar-nav li a {
+	color: #FFFFFF;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.nav.navbar-nav li a.items:hover {
+	background:#000000;
+	color: #FFFFFF;
+}
+
+
+.nav.navbar-nav .dropdown #desplegable {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+.nav.navbar-nav .dropdown #desplegable a.menudespl:hover {
+	background:#FFFFFF;
+	color: #000000;
+}
+
+
+
+
+
+
+#footer {
+	height: 150px;
+	background-color: rgba(0,0,0,1.00);
+}

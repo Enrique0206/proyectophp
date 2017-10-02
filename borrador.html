@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").hover(function(){
+        $("#div1").show(2000);
+        <!--$("#div2").fadeIn("slow");-->
+        <!--$("#div3").fadeIn(3000,3000);-->
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+
+<button>Click to fade in boxes</button><br><br>
+
+<div id="div1" style="width:600px;height:400px;display:none;background-color:white;"><img src="imagenes/jpg/smartphone.jpg"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+
+
+
+
+        <!--listando productos-->
+     <div class="container">
+            
+      	<div class="panel">
+                
+         	<div class="panel-heading">
+          		<h4 class="panel-title">LISTA DE PRODUCTOS</h4>
+          	</div>
+            
+            <table class="table">
+         		<thead>
+                	 <tr>
+                    	<th>ID</th>
+                        <th>CATEGORÍA</th>
+                        <th>MODELO</th>
+                        <th>PRECIO</th>
+                        <th>IMAGEN</th>                            
+                        <th>ESTADO</th>
+                            
+                        <th width="50"></th>
+                        <th width="50"></th>
+                        <th width="50"></th>
+                   	</tr>
+            	</thead>
+        		
+                <tbody>
+                   	<?php foreach ($lista as $producto) {?>
+                    <tr>
+                  		<td><?=$producto->id?></td>
+                    	<td><?=$producto->categorias_nombre?></td>
+                        <td><?=$producto->nombre?></td>
+                        <td><?=$producto->precio?></td>                                
+                        <td><a href="productos_imagen.php?id=<?=$producto->id?>" class="colorbox"><img src="productos_imagen.php?id=<?=$producto->id?>" height="32"/></a></td>                              
+                        <td><?=$producto->estado?></td>
+                                
+                        <!--<td><a href="" class="btn btn-info" >Mostrar</a></td>-->
+                        <td><a href="" class="btn btn-warning" >Editar</a></td> 
+                        <!--<td><a href="eliminar_productos.php?id=<?=$producto->id?>" class="btn btn-danger">Eliminar</a></td>-->    
+                        <td><a href="javascript:void(0)"  onclick="eliminar(<?=$producto->id?>)"class="btn btn-danger"></i> Eliminar</a></td>            	                                         
+                    </tr>                   
+       	     		<?php }?>
+              	</tbody>      		    
+        	</table>
+            
+                <div class="panel-footer">
+                    <a href="registrar_producto.php" class="btn btn-primary">Nuevo</a>
+                </div>
+                
+            </div>
+                
+        </div>
+		<!--listando productos-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
